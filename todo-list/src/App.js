@@ -3,6 +3,7 @@ import { useState } from "react";
 import Todo from "./components/Todo";
 import TodoForm from "./components/TodoForm";
 import Header from "./components/Header";
+import Faixa from "./components/Faixa";
 
 function App() {
   const [todos, setTodos] = useState([
@@ -31,6 +32,7 @@ function App() {
           <Todo key={index} todo={todo} />
         ))}
       </div>
+      <Faixa />
     </div>
   );
 }
