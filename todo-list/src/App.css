@@ -1,38 +1,93 @@
+body {
+  background-color: #fce12e;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #000;
+    border-radius: 8px;
+
+    span {
+      font-weight: 600;
+      color: #000000;
+      display: block;
+      width: 270px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
   }
-  to {
-    transform: rotate(360deg);
+
+  .content {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  .checkBox {
+    display: block;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .checkBox div {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    top: -52px;
+    left: -52px;
+    position: absolute;
+    transform: rotateZ(45deg);
+    z-index: 100;
+  }
+
+  .checkBox input[type="checkbox"]:checked + div {
+    left: -10px;
+    top: -10px;
+  }
+
+  .checkBox input[type="checkbox"] {
+    position: absolute;
+    left: 50px;
+    visibility: hidden;
+  }
+
+  .transition {
+    transition: 300ms ease;
+  }
+
+  .delete {
+    cursor: pointer;
+    color: #ea1b00;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
   }
 }
