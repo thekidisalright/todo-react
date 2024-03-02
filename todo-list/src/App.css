@@ -2,6 +2,43 @@ body {
   background-color: #fce12e;
 }
 
+body:has(.vol2){
+  background-color: #ea1b00;
+
+  .header {
+    .brand {
+      color: #fce12e;
+    }
+  }
+
+  .todo-form {
+    input {
+      background-color: #fce12e;
+    }
+  }
+
+  .todo-list {
+    .todo {
+      border-color: #000;
+      background-color: #fce12e;
+      span {
+        color: #000;
+      }
+    }
+
+    .checkBox {
+      border-color: #000;
+      div {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .faixa {
+    background-color: #fce12e;
+  }
+}
+
 .App {
   display: flex;
   flex-direction: column;
